@@ -12,7 +12,7 @@ Hoe.plugin :bundler
 # Hoe.plugin :rcov
 # Hoe.plugin :rdoc
 
-Hoe.spec 'rsql-ruby' do
+Hoe.spec 'rsql_ruby' do
   developer('Jan Strnadek', 'jan.strnadek@eman.cz')
   license 'MIT'
 

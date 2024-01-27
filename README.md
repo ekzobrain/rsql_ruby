@@ -1,4 +1,4 @@
-# rsql-ruby
+# rsql_ruby
 
 Ruby RSQL/FIQL parser library. 
 
@@ -10,11 +10,11 @@ Kudos:
 ## How to use?
 
 ```
-gem install rsql-ruby
+gem install rsql_ruby
 ```
 
 ```
-require 'rsql-ruby'
+require 'rsql_ruby'
 puts RsqlRuby.parse('movies=in=(Matrix,"Scary Movie"),year=gte=2020')
 ```
 
