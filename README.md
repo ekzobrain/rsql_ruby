@@ -15,7 +15,7 @@ gem install rsql-ruby
 
 ```
 require 'rsql-ruby'
-puts RsqlRuby.parse("movies=in=(Matrix, Scary Movie),year=gte=2020")
+puts RsqlRuby.parse('movies=in=(Matrix,"Scary Movie"),year=gte=2020')
 ```
 
 for more see tests.
