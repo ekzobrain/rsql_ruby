@@ -51,11 +51,11 @@ def create_logical_operator(operator, lhs, rhs)
   }
 end
 
-def create_constraint(selector, comparsion, argument)
+def create_constraint(selector, comparison, argument)
   {
     type: :CONSTRAINT,
     selector: selector,
-    comparsion: comparsion,
+    comparison: comparison,
     argument: argument
   }
 end

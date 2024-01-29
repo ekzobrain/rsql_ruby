@@ -10,31 +10,31 @@ class TestRsqlRuby::TestRsql < Minitest::Test
       'name=="Kill Bill";year=gt=2003' => {
         type: :COMBINATION,
         operator: :AND,
-        lhs: { type: :CONSTRAINT, selector: 'name', comparsion: '==', argument: 'Kill Bill' },
-        rhs: { type: :CONSTRAINT, selector: 'year', comparsion: '=gt=', argument: '2003' },
+        lhs: { type: :CONSTRAINT, selector: 'name', comparison: '==', argument: 'Kill Bill' },
+        rhs: { type: :CONSTRAINT, selector: 'year', comparison: '=gt=', argument: '2003' },
       },
       'name=="Kill;nam \'\'e=gt=Bill";year=gt=2003' => {
         type: :COMBINATION,
         operator: :AND,
-        lhs: { type: :CONSTRAINT, selector: 'name', comparsion: '==', argument: 'Kill;nam \'\'e=gt=Bill' },
-        rhs: { type: :CONSTRAINT, selector: 'year', comparsion: '=gt=', argument: '2003' },
+        lhs: { type: :CONSTRAINT, selector: 'name', comparison: '==', argument: 'Kill;nam \'\'e=gt=Bill' },
+        rhs: { type: :CONSTRAINT, selector: 'year', comparison: '=gt=', argument: '2003' },
       },
       'name==\'Kill;"name"=gt=Bill\',year=gt=2003' => {
         type: :COMBINATION,
         operator: :OR,
-        lhs: { type: :CONSTRAINT, selector: 'name', comparsion: '==', argument: 'Kill;"name"=gt=Bill' },
-        rhs: { type: :CONSTRAINT, selector: 'year', comparsion: '=gt=', argument: '2003' },
+        lhs: { type: :CONSTRAINT, selector: 'name', comparison: '==', argument: 'Kill;"name"=gt=Bill' },
+        rhs: { type: :CONSTRAINT, selector: 'year', comparison: '=gt=', argument: '2003' },
       },
       "name=in=('sci-fi','action');year=gt=2003" => {
         type: :COMBINATION,
         operator: :AND,
-        lhs: { type: :CONSTRAINT, selector: 'name', comparsion: '=in=', argument: [ 'sci-fi', 'action' ] },
-        rhs: { type: :CONSTRAINT, selector: 'year', comparsion: '=gt=', argument: '2003' },
+        lhs: { type: :CONSTRAINT, selector: 'name', comparison: '=in=', argument: [ 'sci-fi', 'action' ] },
+        rhs: { type: :CONSTRAINT, selector: 'year', comparison: '=gt=', argument: '2003' },
       },
       'name=in="test \' \" name"' => {
         type: :CONSTRAINT,
         selector: 'name' ,
-        comparsion: '=in=',
+        comparison: '=in=',
         argument: 'test \' \\" name',
       }
     }.each do |key, output|
